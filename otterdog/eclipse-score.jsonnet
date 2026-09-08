@@ -201,6 +201,9 @@ local qnx_environments = [
 local newDependableElementRepo(name, subcategory = null) = newScoreRepo(name, pages = true, category = "modules", subcategory = subcategory) {
   template_repository: "eclipse-score/module_template",
   environments+: qnx_environments,
+  workflows+: {
+    max_cache_size_gb: 50,
+  }
 };
 
 # Repositories owned or maintained by the infrastructure community should use this helper.
@@ -254,7 +257,10 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
         description: "Subcategory used to further group repositories within a category in the auto-generated organization README file",
         value_type: "string",
       },
-    ]
+    ],
+    workflows+: {
+      max_cache_size_gb: 50,
+    }
   },
   teams+: [
     orgs.newTeam('automotive-score-technical-leads') {
@@ -684,6 +690,9 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
           deployment_branch_policy: "all",
         },
       ],
+      workflows+: {
+        max_cache_size_gb: 50,
+      }
     },
 
     newInfrastructureTeamRepo('reference_integration', true, subcategory = "integration") {
@@ -732,6 +741,9 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
             },
           },
         ],
+        workflows+: {
+          max_cache_size_gb: 50,
+        }
     },
 
     newInfrastructureTeamRepo('os_images', false, subcategory = "integration") {
@@ -786,6 +798,9 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
           },
         },
       ],
+      workflows+: {
+        max_cache_size_gb: 50,
+      },
     },
 
     newInfrastructureTeamRepo('tools') {
@@ -984,6 +999,9 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
     newInfrastructureTeamRepo('bazel_cpp_toolchains', subcategory = "toolchains") {
       description: "Bazel C/C++ toolchain configuration repository",
       environments+: qnx_environments,
+      workflows+: {
+        max_cache_size_gb: 50,
+      }
     },
 
     newInfrastructureTeamRepo('toolchains_gcc_packages', subcategory = "toolchains") {
@@ -1002,6 +1020,9 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
     newInfrastructureTeamRepo('module_template', pages = true) {
       description: "C++ & Rust Bazel Template Repository",
       is_template: true,
+      workflows+: {
+        max_cache_size_gb: 50,
+      }
     },
 
     newInfrastructureTeamRepo('cicd-actions', subcategory = "automation") {
@@ -1018,6 +1039,9 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
       environments+: [
         orgs.newEnvironment('copilot'),
       ],
+      workflows+: {
+        max_cache_size_gb: 50,
+      }
     },
 
     newInfrastructureTeamRepo('coverage_tool', pages = true, subcategory = "tooling") {
@@ -1088,6 +1112,9 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
             requires_linear_history: true,
           },
         ],
+        workflows+: {
+          max_cache_size_gb: 50,
+        }
     },
 
     newInfrastructureTeamRepo('score_rust_policies', subcategory = "toolchains") {
