@@ -51,7 +51,7 @@ local active_languages = {
   "bazel-tools-cc": ['actions', 'c-cpp', 'python'],
   "bazel-tools-python": ['actions', 'python'],
   "bazel_cpp_toolchains": ['actions', 'c-cpp'],
-  "bazel_platforms": ['actions'],
+  "bazel_platforms": [],
   "bazel_registry": ['actions', 'python'],
   "bazel_registry_ui": ['actions', 'javascript-typescript'],
   "cicd-actions": ['actions', 'javascript-typescript'],
