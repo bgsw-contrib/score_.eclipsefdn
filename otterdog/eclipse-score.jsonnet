@@ -69,7 +69,7 @@ local active_languages = {
   "ferrocene_toolchain_builder": ['actions', 'python'],
   "inc_daal": ['actions', 'c-cpp'],
   "inc_diagnostics": ['actions', 'c-cpp'],
-  "os_autosd": ['actions', 'c-cpp'],
+  "os_autosd": ['actions'],
   "inc_security_crypto": ['actions', 'c-cpp', 'python'],
   "inc_someip_gateway": ['actions', 'c-cpp', 'python'],
   "infrastructure": ['actions'],
