@@ -1407,6 +1407,8 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
       aliases: [
         "inc_diagnostics",
       ],
+      allow_rebase_merge: true,
+      allow_squash_merge: true,
       description: "Repository for diagnostics feature",
       rulesets: [
         orgs.newRepoRuleset('main') {
@@ -1421,9 +1423,6 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
               "Docs Build mergeable",
               "License check mergeable",
             ],
-          },
-          required_merge_queue: orgs.newMergeQueue() {
-            merge_method: "SQUASH",
           },
         },
       ],
